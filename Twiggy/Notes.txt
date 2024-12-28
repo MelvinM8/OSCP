@@ -11,13 +11,36 @@
 
 =========================================================================
 [To-Try LIST]:
+- Google ZeroMQ ZMPT 2.0
+- Curl http services
 
 =========================================================================
 [NMAP RESULTS]:
+$ sudo nmap -p- -sV 192.168.52.62
+[sudo] password for kali: 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-28 05:54 UTC
+Stats: 0:00:09 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 4.71% done; ETC: 05:57 (0:03:02 remaining)
+Nmap scan report for 192.168.52.62
+Host is up (0.0011s latency).
+Not shown: 65529 filtered tcp ports (no-response)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.4 (protocol 2.0)
+53/tcp   open  domain  NLnet Labs NSD
+80/tcp   open  http    nginx 1.16.1
+4505/tcp open  zmtp    ZeroMQ ZMTP 2.0
+4506/tcp open  zmtp    ZeroMQ ZMTP 2.0
+8000/tcp open  http    nginx 1.16.1
 
 =========================================================================
 [Web Services Enumeration]:
-
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.4 (protocol 2.0)
+53/tcp   open  domain  NLnet Labs NSD
+80/tcp   open  http    nginx 1.16.1
+4505/tcp open  zmtp    ZeroMQ ZMTP 2.0
+4506/tcp open  zmtp    ZeroMQ ZMTP 2.0
+8000/tcp open  http    nginx 1.16.1
 
 =========================================================================
 [OTHER / PRIVILEGE-ESCALATION]:
