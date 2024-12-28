@@ -1,0 +1,45 @@
+TCP/IP PROTOCOLS TO KNOW FULLY or at least like 80-95%:
+
+Protocol, Port Number:
+FTP, 20/21
+SSH, 22
+Telnet, 23
+SMTP, 25
+DNS, 53
+DHCP, 67/68
+TFTP, 69
+HTTP, 80-8000-8080-443,8443,10443
+
+WEBMIN PORTS: 10,000s (look out for those high ports where things hide)
+POP3, 110
+NTP, 123
+IMAP, 143
+SNMP, 161/162
+IRC, 194 6667
+LDAP, 389
+HTTPS, 443
+SMB, 445
+SMTPS, 465
+IMAPS, 993
+POP3S, 995
+RDP, 3389
+MSSQL, 1433
+MySQL, 3306
+PostgreSQL, 5432
+VNC, 5900
+MongoDB, 27017
+Redis, 6379
+RIP, 520
+Kerberos, 88
+MSRPC, 135
+NetBIOS, 139
+AFP (Apple Filing Protocol), 548
+SIP (Session Initiation Protocol), 5060/5061
+NNTP (Network News Transfer Protocol), 119
+LDAP (over SSL), 636
+FTP (over TLS/SSL), 990
+Telnet (over SSL), 992
+IMAP4 (over SSL), 993
+POP3 (over SSL), 995
+RADIUS, 1812/1813
+IKE (Internet Key Exchange), 500
