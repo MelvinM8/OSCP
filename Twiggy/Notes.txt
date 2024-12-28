@@ -1,11 +1,11 @@
 [OS]: Linux
-[Web-Technology]:
+[Web-Technology]: 
 [Hostname]:
 
 [IP]: 192.168.52.62
 
 [USERS]:
-
+root
 
 [CREDENTIALS]:
 
@@ -44,11 +44,11 @@ PORT     STATE SERVICE VERSION
 
 =========================================================================
 [OTHER / PRIVILEGE-ESCALATION]:
-
+* https://www.exploit-db.com/exploits/48421
 
 =========================================================================
 Take Away Concepts (for the flat-file reference system):
-* 
+* ZeroMQ Exploit
 * 
 * 
 <take away footholds/commands/hacks/etc>
