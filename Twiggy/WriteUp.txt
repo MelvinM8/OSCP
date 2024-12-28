@@ -1,0 +1,20 @@
+- First we run the nmap scan:
+┌──(mel㉿kali)-[~]
+└─$ sudo nmap -p- 192.168.52.62
+
+- Receive the following results:
+
+Nmap scan report for 192.168.52.62
+Host is up (0.0011s latency).
+Not shown: 65530 filtered ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+53/tcp   open  domain
+80/tcp   open  http
+4505/tcp open  unknown
+4506/tcp open  unknown
+8000/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 105.30 seconds
+
+- We notice Port 8000 is open, so we can try to curl the IP to see if it yields any results:
