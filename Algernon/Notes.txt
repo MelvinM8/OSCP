@@ -10,7 +10,9 @@
 
 =========================================================================
 [To-Try LIST]:
-
+- ftp anonymous access
+- http website
+- Microsoft IIS exploit ***
 
 =========================================================================
 [NMAP RESULTS]:
@@ -70,7 +72,7 @@ Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 =========================================================================
 Take Away Concepts (for the flat-file reference system):
-* 
+* SmarterMail Exploit
 * 
 * 
 <take away footholds/commands/hacks/etc>
