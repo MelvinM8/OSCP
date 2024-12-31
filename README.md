@@ -6,3 +6,7 @@ SaltStack Vector
 
 # Algernon - Windows
 SmarterMail Exploit
+
+# Internal - Windows
+SMB Code Execution
+Metasploit and meterpreter usage
