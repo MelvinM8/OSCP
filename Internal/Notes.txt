@@ -10,7 +10,7 @@
 
 =========================================================================
 [To-Try LIST]:
-- Microsoft DNS exploit
+- Microsoft DNS exploit**
 - Microsoft HTTPAPI exploit
 
 =========================================================================
@@ -57,14 +57,16 @@ PORT      STATE SERVICE            VERSION
 Service Info: Host: INTERNAL; OS: Windows; CPE: cpe:/o:microsoft:windows_server_2008::sp1, cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2008:r2
 
 =========================================================================
-
+[Web Services Enumeration]:
+- Microsoft DNS
+- Microsoft Windows RPC
 
 =========================================================================
 [OTHER / PRIVILEGE-ESCALATION]:
 
 =========================================================================
 Take Away Concepts (for the flat-file reference system):
-* 
-* 
+* Python script writing
+* Meterpreter and msfvenom usage
 * 
 <take away footholds/commands/hacks/etc>
