@@ -1,12 +1,26 @@
-# OSCP
-Notes and Commands to remember for the OSCP Certification exam.
+# Completed Boxes from TJNull and LainKusanagi's Lists
+# Astronaut - Linux
+CVE-2021-21425 Exploit
 
-# Twiggy - Linux
-SaltStack Vector
+# Blackgate - Linux
+RedisRogueServer Exploit
 
-# Algernon - Windows
-SmarterMail Exploit
+# Boolean - Linux
+In Progress
 
-# Internal - Windows
-SMB Code Execution
-Metasploit and meterpreter usage
+# bullyBox - Linux
+CVE-2022-3552
+
+# ClamAV - Linux
+Sendmail 8.13.4 Exploit
+
+# Cockpit - Linux
+SQL Injection & gtfobins Priv Esc
+
+# Codo - Linux
+Codo arbitrary file upload & linpeas reconnaissance Priv Esc
+
+# Craft - Linux
+ODT File upload exploit using ODT macro payload
+
+# Extplorer - Linux
