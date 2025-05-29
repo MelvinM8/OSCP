@@ -58,4 +58,55 @@ PEFILE MagicByte Exploit & gtfobins Priv Esc
  PostgreSQL 9.3-11.7 - Remote Code Execution (RCE)
 
 ### Nukem - Linux
-WordPress Plugin Simple File List 4.2.2 - Arbitrary File Upload 
+WordPress Plugin Simple File List 4.2.2 - Arbitrary File Upload Exploit & linpeas reconnaissance for lateral movement + gtfobins Priv Esc
+
+### Ochima - Linux
+Mailtrail v0.53 Exploit & backup file + ssh Priv Esc
+
+### Payday - Linux
+In Progress
+
+### Pebbles - Linux
+Zoneminder 1.29/1.30 - Cross-Site Scripting / SQL Injection / Session Fixation / Cross-Site Request Forgery Exploit
+
+### Pelican - Linux
+Exhibitor Web UI 1.7.1 - Remote Code Execution & gtfobins Priv Esc
+
+### Postfish - Linux
+Hydra user/password cracking & Phishing email, lateral movement, and sudo commands Priv Esc
+
+### Press - Linux
+Flatpress 1.2.1 - File upload bypass to RCE Vulnerebility & gtfobins Priv Esc
+
+### Roquefort - Linux
+In Progress
+
+### Scrutiny - Linux
+CVE-2024-27199 & lateral movement + gtfobins Priv Esc
+
+### Slort - Linux
+In Progress
+
+### Snookums - Linux
+SimplePHPGal-RCE exploit & mysql Priv Esc
+
+### Sorcerer - Linux
+SSH Exploit & gtfobins Priv Esc
+
+### SPX - Linux
+CVE-2024-42007 & MAKE file Priv Esc
+
+### Twiggy - Linux
+CVE-2020-11651 
+
+### Vmdak - Linux
+SQL Authentication Bypass & CVE-2024-48594
+
+### Wombo - Linux
+Redis-rogue-server Exploit
+
+### XposedAPI - Linux
+ELF file w/ reverse shell & passwd creation for Priv Esc
+
+### ZenPhoto - Linux
+ZenPhoto 1.4.1.4 - 'ajax_create_folder.php' Remote Code Execution & linux-rds-exploit Priv Esc
