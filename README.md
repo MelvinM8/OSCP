@@ -24,3 +24,12 @@ Codo arbitrary file upload & linpeas reconnaissance Priv Esc
 ODT File upload exploit using ODT macro payload
 
 # Extplorer - Linux
+Default Creds exploit
+
+# Fanatastic - Linux
+CVE-2021-43798 Exploit & disk group permissions Priv Esc
+
+# Fired - Linux
+CVE-2023-32315 Exploit & CVE-2021-3560 Priv Esc
+
+# Hawat - Linux
